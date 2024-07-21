@@ -4,7 +4,7 @@ Welcome to the `go-leetcode` repository! This repository contains solutions to v
 
 ## Directory Structure
 
-```
+```bash
 go-leetcode/
 ├── algorithms/
 │   └── 1-two-sum/
@@ -82,8 +82,8 @@ This command will create the directory `algorithms/1-two-sum` with the necessary
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/patrick204nqh/go-leetcode/tree/main?tab=MIT-1-ov-file) file for details.
 
 ---
 
-Happy coding! 🚀🔨🤖🔧
+Happy coding! 🔨🚀
