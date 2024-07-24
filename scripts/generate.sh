@@ -16,8 +16,19 @@ fi
 
 mkdir -p $PROBLEM_DIR
 
-# Convert problem_name to CamelCase for function names
-CAMEL_CASE_NAME=$(echo $PROBLEM_NAME | awk -F '-' '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2)); print}' OFS='')
+# Convert problem_name to camelCase for function names
+to_camel_case() {
+    IFS='-' read -r -a array <<< "$1"
+    local output="${array[0]}"
+    for element in "${array[@]:1}"
+    do
+        output+=$(tr '[:lower:]' '[:upper:]' <<< ${element:0:1})${element:1}
+    done
+    echo "$output"
+}
+
+CAMEL_CASE_NAME=$(to_camel_case $PROBLEM_NAME)
+CAPITALIZED_CAMEL_CASE_NAME="$(tr '[:lower:]' '[:upper:]' <<< ${CAMEL_CASE_NAME:0:1})${CAMEL_CASE_NAME:1}"
 
 # Create main.go
 cat <<EOL > $PROBLEM_DIR/main.go
@@ -51,7 +62,7 @@ import (
     "testing"
 )
 
-func Test$CAMEL_CASE_NAME(t *testing.T) {
+func test$CAPITALIZED_CAMEL_CASE_NAME(t *testing.T) {
     testCases := []struct {
         nums     []int
         target   int
