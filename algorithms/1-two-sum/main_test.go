@@ -18,7 +18,7 @@ func TestTwoSum(t *testing.T) {
     }
 
     for _, tc := range testCases {
-        result := TwoSum(tc.nums, tc.target)
+        result := twoSum(tc.nums, tc.target)
         if !reflect.DeepEqual(result, tc.expected) {
             color.Red("FAIL: TwoSum(%v, %d) = %v; expected %v", tc.nums, tc.target, result, tc.expected)
             t.Errorf("FAIL: TwoSum(%v, %d) = %v; expected %v", tc.nums, tc.target, result, tc.expected)
