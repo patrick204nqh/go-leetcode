@@ -35,7 +35,7 @@ cd go-leetcode
 To generate a new problem directory, use the `generate` target in the `Makefile`:
 
 ```sh
-make generate PROBLEM_NUMBER=1 PROBLEM_NAME=two-sum
+make generate 1 two-sum
 ```
 
 This will create a new directory `algorithms/1-two-sum` with `main.go` and `main_test.go` files pre-populated with boilerplate code.
@@ -45,7 +45,7 @@ This will create a new directory `algorithms/1-two-sum` with `main.go` and `main
 To run a specific problem's main file, use the `run` target in the `Makefile`:
 
 ```sh
-make run PROBLEM_DIR=algorithms/1-two-sum
+make run algorithms/1-two-sum
 ```
 
 ### Testing a Problem
@@ -53,32 +53,12 @@ make run PROBLEM_DIR=algorithms/1-two-sum
 To run tests for a specific problem, use the `test` target in the `Makefile`:
 
 ```sh
-make test PROBLEM_DIR=algorithms/1-two-sum
+make test algorithms/1-two-sum
 ```
 
 ### Adding More Test Cases
 
 You can add more test cases in the `main_test.go` file under the `testCases` array. Each test case is a struct containing the input and the expected output.
-
-### Scripts
-
-#### Generate Script
-
-The `generate.sh` script automates the creation of new problem directories.
-
-Usage:
-
-```sh
-./scripts/generate.sh <problem_number> <problem_name>
-```
-
-Example:
-
-```sh
-./scripts/generate.sh 1 two-sum
-```
-
-This command will create the directory `algorithms/1-two-sum` with the necessary boilerplate code.
 
 ## License
 
