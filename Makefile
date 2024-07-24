@@ -5,14 +5,14 @@ all: run
 # Run the Go program
 .PHONY: run
 run:
-	@echo "Running main.go in $(PROBLEM_DIR)..."
-	@cd $(PROBLEM_DIR) && go run main.go
+	@echo "Running main.go in $(filter-out $@,$(MAKECMDGOALS))..."
+	@cd $(filter-out $@,$(MAKECMDGOALS)) && go run main.go
 
 # Test the Go program
 .PHONY: test
 test:
-	@echo "Running tests in $(PROBLEM_DIR)..."
-	@cd $(PROBLEM_DIR) && go test -v
+	@echo "Running tests in $(filter-out $@,$(MAKECMDGOALS))..."
+	@cd $(filter-out $@,$(MAKECMDGOALS)) && go test -v
 
 # Generate a new problem directory with positional parameters
 .PHONY: generate
