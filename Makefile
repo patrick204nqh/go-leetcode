@@ -20,6 +20,12 @@ generate:
 	@echo "Generating new problem directory..."
 	@./scripts/generate.sh $(filter-out $@,$(MAKECMDGOALS))
 
+# Format the Go code
+.PHONY: format
+format:
+	@echo "Formatting Go code..."
+	@gofmt -s -w .
+
 # Display usage information
 .PHONY: help
 help:
@@ -32,6 +38,7 @@ help:
 	@echo "  run       - Run the Go program in the specified problem directory"
 	@echo "  test      - Run tests in the specified problem directory"
 	@echo "  generate  - Generate a new problem directory with custom arguments"
+	@echo "  format    - Format the Go code"
 
 # Ignore any make goals that are numbers or problem names
 %:
