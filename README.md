@@ -83,7 +83,7 @@ perf.Analyze("Description", func() {
 ```go
 package main
 
-import "path/to/utils/perf"
+import "github.com/patrick204nqh/go-leetcode/utils/perf"
 
 func exampleFunction() {
     sum := 0
