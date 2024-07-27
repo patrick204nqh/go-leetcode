@@ -12,11 +12,15 @@ Welcome to the `go-leetcode` repository! This repository contains solutions to v
 ```bash
 go-leetcode/
 ├── algorithms/
-│   └── 1-two-sum/
-│       ├── main.go
-│       └── main_test.go
+│   ├── 1-two-sum/
+│   │   ├── main.go
+│   │   └── main_test.go
+│   └── ...
 ├── scripts/
 │   └── generate.sh
+├── utils/
+│   └── perf/
+│       └── analyzer.go
 ├── Makefile
 └── README.md
 ```
@@ -61,9 +65,19 @@ To run tests for a specific problem, use the `test` target in the `Makefile`:
 make test algorithms/1-two-sum
 ```
 
-### Adding More Test Cases
+### Performance Analysis
 
-You can add more test cases in the `main_test.go` file under the `testCases` array. Each test case is a struct containing the input and the expected output.
+To use the performance analyzer, import the `perf` package and wrap your code block:
+
+```go
+import "github.com/patrick204nqh/utils/perf"
+
+perf.Analyze("Description", func() {
+    // Your code here
+})
+```
+
+For more details, see `utils/perf/analyzer.go`.
 
 ## License
 
