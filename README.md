@@ -19,8 +19,9 @@ go-leetcode/
 ├── scripts/
 │   └── generate.sh
 ├── utils/
-│   └── perf/
-│       └── analyzer.go
+│   ├── perf/
+│   │   └── analyzer.go
+│   └── ...
 ├── Makefile
 └── README.md
 ```
@@ -70,7 +71,7 @@ make test algorithms/1-two-sum
 To use the performance analyzer, import the `perf` package and wrap your code block:
 
 ```go
-import "github.com/patrick204nqh/utils/perf"
+import "github.com/patrick204nqh/go-leetcode/utils/perf"
 
 perf.Analyze("Description", func() {
     // Your code here
