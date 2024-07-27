@@ -77,7 +77,42 @@ perf.Analyze("Description", func() {
 })
 ```
 
-For more details, see `utils/perf/analyzer.go`.
+#### Example Usage
+
+```go
+package main
+
+import "path/to/utils/perf"
+
+func exampleFunction() {
+    sum := 0
+    for i := 0; i < 1000000; i++ {
+        sum += i
+    }
+}
+
+func main() {
+    perf.Analyze("Example Function", exampleFunction)
+}
+```
+
+#### Sample Output
+
+```
++=================== Performance Analysis ===================+
+| Metric             | Value                                 |
++============================================================+
+| Description        | Example Function                      |
++------------------------------------------------------------+
+| Total Time (s)     | 0.012345                              |
+| Memory Before (KB) | 2048                                  |
+| Memory After (KB)  | 3072                                  |
+| Memory Used (KB)   | 1024                                  |
+| Memory Change (%)  | 50.00                                 |
+| Goroutines Before  | 2                                     |
+| Goroutines After   | 2                                     |
++============================================================+
+```
 
 ## License
 
