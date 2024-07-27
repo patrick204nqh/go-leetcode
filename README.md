@@ -1,8 +1,8 @@
 # Go LeetCode
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/patrick204nqh/go-leetcode)](https://golang.org/)
-[![License](https://img.shields.io/github/license/patrick204nqh/go-leetcode)](https://github.com/patrick204nqh/go-leetcode/blob/main/LICENSE)
 [![Go Report Card](https://goreportcard.com/badge/github.com/patrick204nqh/go-leetcode)](https://goreportcard.com/report/github.com/patrick204nqh/go-leetcode)
+[![License](https://img.shields.io/github/license/patrick204nqh/go-leetcode)](https://github.com/patrick204nqh/go-leetcode/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/patrick204nqh/go-leetcode)](https://github.com/patrick204nqh/go-leetcode/issues)
 
 Welcome to the `go-leetcode` repository! This repository contains solutions to various LeetCode problems written in Go. Each problem is organized into a directory following a consistent naming convention for easy navigation and management.
